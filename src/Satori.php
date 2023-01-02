@@ -11,8 +11,11 @@ use Symfony\Component\Process\Process;
 class Satori
 {
     protected string $html;
+
     protected int $width = 1200;
+
     protected int $height = 630;
+
     protected TemporaryDirectory $temporaryHtmlDirectory;
 
     public function __construct(string $html)
