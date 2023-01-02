@@ -36,5 +36,8 @@ jobs:
       - name: Install Satori
         run: npm install satori
 
+      - name: Install html-react-parser
+        run: npm install html-react-parser
+
       - name: Execute tests
         run: vendor/bin/pest
