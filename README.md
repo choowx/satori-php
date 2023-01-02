@@ -18,10 +18,11 @@ You can install the package via composer:
 composer require choowx/satori-php
 ```
 
-This package relies on the `satori` js package being available on your system. In most cases you can accomplish this by issues these commands in your project.
+This package relies on the `satori` and `html-react-parser` js packages being available on your system. In most cases you can accomplish this by issues these commands in your project.
 
 ```bash
 npm install satori
+npm install html-react-parser
 ```
 
 ## Usage
