@@ -5,9 +5,9 @@ const parse = require('html-react-parser');
 (async () => {
     const arguments = process.argv.slice(2);
 
-    const htmlFilePath = arguments[0]
-    const width = arguments[1]
-    const height = arguments[2]
+    const htmlFilePath = arguments[0];
+    const width = arguments[1];
+    const height = arguments[2];
 
     const html = fs.readFileSync(htmlFilePath, { encoding:'utf8', flag:'r' });
 
@@ -18,10 +18,10 @@ const parse = require('html-react-parser');
             height,
             fonts: [
                 {
-                    name: 'Inter',
-                    data: fs.readFileSync(`${__dirname}/../fonts/Inter/Inter-Medium.woff`),
+                    name: 'Noto+Sans',
+                    data: fs.readFileSync(`${__dirname}/../fonts/NotoSans/NotoSans-Regular.ttf`),
                     weight: 400,
-                    style: 'normal',
+                    style: 'regular',
                 },
             ],
         },
