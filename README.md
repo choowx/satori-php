@@ -46,6 +46,28 @@ $svg = Satori::html('<div style="color: black">hello, world</div>')
 // $svg = '<svg width="600" height="315" viewBox="0 0 600 315"...
 ```
 
+Using custom fonts available in the file system:
+
+> Satori currently supports three font formats: TTF, OTF and WOFF. Note that WOFF2 is not supported at the moment.
+
+```php
+use Choowx\Satori\Font;
+use Choowx\Satori\Satori;
+
+$svg = Satori::html('<div style="color: black">hello, world</div>')
+    ->withFonts([
+        Font::path('/path/to/Roboto-Regular.ttf')
+            ->name('Roboto')
+            ->weight(400)
+            ->style('regular'),
+        Font::path('/path/to/Roboto-Bold.ttf')
+            ->name('Roboto')
+            ->weight(700)
+            ->style('bold'),
+    ])
+    ->convert();
+```
+
 ## Testing
 
 ```bash

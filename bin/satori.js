@@ -8,6 +8,7 @@ const parse = require('html-react-parser');
     const htmlFilePath = arguments[0];
     const width = arguments[1];
     const height = arguments[2];
+    const fonts = JSON.parse(arguments[3]);
 
     const html = fs.readFileSync(htmlFilePath, { encoding:'utf8', flag:'r' });
 
@@ -16,14 +17,21 @@ const parse = require('html-react-parser');
         {
             width,
             height,
-            fonts: [
-                {
-                    name: 'Noto+Sans',
-                    data: fs.readFileSync(`${__dirname}/../fonts/NotoSans/NotoSans-Regular.ttf`),
-                    weight: 400,
-                    style: 'regular',
-                },
-            ],
+            fonts: fonts.length
+                ? fonts.map((font) => ({
+                    name: font.name,
+                    data: fs.readFileSync(font.path),
+                    weight: font.weight,
+                    style: font.style,
+                }))
+                : [
+                    {
+                        name: 'Noto Sans',
+                        data: fs.readFileSync(`${__dirname}/../fonts/NotoSans/NotoSans-Regular.ttf`),
+                        weight: 400,
+                        style: 'regular',
+                    },
+                ]
         },
     );
 

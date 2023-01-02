@@ -16,11 +16,14 @@ class Satori
 
     protected int $height = 630;
 
+    protected FontCollection $fonts;
+
     protected TemporaryDirectory $temporaryHtmlDirectory;
 
     public function __construct(string $html)
     {
         $this->html = $html;
+        $this->fonts = new FontCollection;
     }
 
     public static function html(string $html): self
@@ -38,6 +41,15 @@ class Satori
     public function height(int $height): self
     {
         $this->height = $height;
+
+        return $this;
+    }
+
+    public function withFonts(array $fonts): self
+    {
+        foreach ($fonts as $font) {
+            $this->fonts->push($font);
+        }
 
         return $this;
     }
@@ -80,6 +92,7 @@ class Satori
             'htmlFilePath' => $this->createTemporaryHtmlFile(),
             'width' => $this->width,
             'height' => $this->height,
+            'fonts' => json_encode($this->fonts->toOptions()),
         ], $key);
     }
 
