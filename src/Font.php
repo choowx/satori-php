@@ -5,8 +5,11 @@ namespace Choowx\Satori;
 class Font
 {
     public string $path;
+
     public ?string $name = null;
+
     public ?int $weight = null;
+
     public ?string $style = null;
 
     public function __construct(string $path)

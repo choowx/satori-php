@@ -29,7 +29,7 @@ it('can convert to svg in specified height', function () {
 
 it('can convert to svg with custom font', function () {
     $svg = Satori::html('<div style="color: black">hello, world</div>')
-        ->withFonts([Font::path(__DIR__ . '/fonts/Roboto-Regular.ttf')])
+        ->withFonts([Font::path(__DIR__.'/fonts/Roboto-Regular.ttf')])
         ->convert();
 
     expect($svg)->toBe(

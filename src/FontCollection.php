@@ -2,8 +2,6 @@
 
 namespace Choowx\Satori;
 
-use Spatie\TemporaryDirectory\TemporaryDirectory;
-
 class FontCollection
 {
     protected array $collection = [];
