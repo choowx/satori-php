@@ -1,3 +1,5 @@
+![Satori](https://raw.githubusercontent.com/vercel/satori/main/.github/card.png)
+
 # Run Satori — enlightened library to convert HTML and CSS to SVG, using PHP
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/choowx/satori-php.svg?style=flat-square)](https://packagist.org/packages/choowx/satori-php)
