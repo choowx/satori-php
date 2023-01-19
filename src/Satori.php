@@ -75,15 +75,13 @@ class Satori
 
         $process->run();
 
-        $result = $process->getOutput();
-
         $this->temporaryHtmlDirectory->delete();
 
-        if (! is_string($result)) {
+        if ($process->getErrorOutput()) {
             throw CouldNotRunSatori::make($process->getErrorOutput());
         }
 
-        return $result;
+        return $process->getOutput();
     }
 
     protected function satoriScriptArguments(string $key = null): mixed
