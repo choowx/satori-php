@@ -2,6 +2,13 @@
 
 All notable changes to `satori-php` will be documented in this file.
 
+## v0.2.1 - 2023-01-20
+
+### Fixed
+
+- Improve script error handling
+- Fix `satori` broken on CommonJS (#2)
+
 ## v0.2.0 - 2023-01-02
 
 Support custom fonts
