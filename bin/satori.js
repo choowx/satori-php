@@ -1,8 +1,8 @@
-const satori = require('satori').default;
-const fs = require('fs');
-const parse = require('html-react-parser');
-
 (async () => {
+    const satori = (await import('satori')).default;
+    const fs = await import('fs');
+    const parse = (await import('html-react-parser')).default;
+
     const arguments = process.argv.slice(2);
 
     const htmlFilePath = arguments[0];
