@@ -2,6 +2,10 @@
 
 All notable changes to `satori-php` will be documented in this file.
 
+## v0.2.2 - 2023-06-08
+
+Support projects using ESM
+
 ## v0.2.1 - 2023-01-20
 
 ### Fixed
