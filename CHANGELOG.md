@@ -2,6 +2,14 @@
 
 All notable changes to `satori-php` will be documented in this file.
 
+## v0.2.3 - 2024-07-22
+
+### What's Changed
+
+* Support `symfony/process` `^7.0`.
+
+**Full Changelog**: https://github.com/choowx/satori-php/compare/v0.2.2...v0.2.3
+
 ## v0.2.2 - 2023-06-08
 
 Support projects using ESM
